@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+  <title>Star Wars Trivia Time</title>
+</head> 
+<body>
+  <h1>Play with me! Guess Star Wars trivia questions!</h1>
+  
+  <script>
+    var number = 48;
+    var guess = prompt("How many TIE starfighters were typically carried on an Imperial-class Star Destroyer?");
+    if (guess === "") {
+    	alert("Please enter a number to play the game!");
+    }
+    if (guess == number ) {
+    	alert("Excellent! You win this round!   'I maintain that the effectiveness of the Star Destroyer stems from not only its massive firepower, but from its size. When citizens look at a Star Destroyer and then compare it to the craft which might be mustered to attack it, they have a tendency to dismiss such a notion as suicidal rather than approach the problem tactically.' (Grand Moff Wilhuff Tarkin)");
+    }
+	else {
+		if (guess < number) {
+			alert("Oops! My calculations tell me your guess is too low.   'For every TIE fighter you shoot down, a thousand more will take its place.' (Baron Soontir Fel)");
+			  if ((guess >= number - 20) && (guess < number)) {
+			  	alert("You guessed within 20 integers of the answer. So close. Guess again by refreshing the page!");
+			  }
+		} 
+		else if (guess > number) {
+			alert("Oops! My calculations tell me your guess is too high. Try again by refreshing the page!   'The aging, outdated craft employed by the Rebels are no match for the power of the TIE, and even the prototype T-65 X-wing created by the traitors who escaped from Incom is clearly outclassed.' (Captain David West Reynolds)"); 
+			if ((guess <= number + 20) && (guess > number)) {
+			    alert("You guessed within 20 integers of the correct answer. So close. Guess again by refreshing the page!");
+			}	
+		}		
+	}    
+  </script>
+ </body>
