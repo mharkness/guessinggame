@@ -40,7 +40,7 @@ alert("You guessed " + guess2 + ".");
     } 
 		else if (guess2 > number2) {
 			if ((guess2 <= number2 + 20) && (guess2 > number2)) {
-			 alert("You guessed within 20 integers of the correct answer. So close. Try the next question. Maybe it'll be easier!");
+			 alert("You guessed too low! But you are within 20 integers of the correct answer. So close. Try the next question. Maybe it'll be easier!");
 			}
       else {
         alert("Oops! My calculations tell me your guess is too high. Try the next question!   'Will you look at those walkers? Has there ever been anything so big and gray and ugly, Luke?' (Captain David West Reynolds)"); 
@@ -72,3 +72,58 @@ alert("You guessed " + guess3 + ".");
    		alert("Oops! You got it wrong. Did you answer by typing Y or N? Try this question set again by refreshing the page!");
 	  }				
 	console.log("question 3", guess3);
+var guess4 = prompt("Do Wookiees have claws? (Enter Y or N)");
+alert("You guessed " + guess4 + ".");
+  switch(guess4) {
+    case "Y":
+        alert("Excellent! You win this round!   'I didn't realize Wookiees had claws like those. Though I suppose I should have. You are arboreal, after all.' (Princess Leia)");
+        break;
+    case "y":
+        alert("Excellent! You win this round!   'I didn't realize Wookiees had claws like those. Though I suppose I should have. You are arboreal, after all.' (Princess Leia)");
+        break;
+    case "YES":
+        alert("Excellent! You win this round!   'I didn't realize Wookiees had claws like those. Though I suppose I should have. You are arboreal, after all.' (Princess Leia)");
+        break;
+    case "yes":
+        alert("Excellent! You win this round!   'I didn't realize Wookiees had claws like those. Though I suppose I should have. You are arboreal, after all.' (Princess Leia)");
+        break;    
+    case "Yes":
+        alert("Excellent! You win this round!   'I didn't realize Wookiees had claws like those. Though I suppose I should have. You are arboreal, after all.' (Princess Leia)");
+        break;
+    default:
+      alert("Oops! You got it wrong. Did you answer by typing Y or N? Try this question set again by refreshing the page!");
+    }       
+  console.log("question 4", guess4);
+var number5 = 1;
+var guess5 = prompt("How many children did Chewbacca have back on his home planet of Kashyyyk?");
+alert("You guessed " + guess5 + ".");
+  if (guess5 == number5) {
+    alert("Excellent! You win this round!   \"But sir, nobody worries about upsetting a droid.\"     \"That's cause droids don't pull people's arms out of their sockets when they lose. Wookiees are known to do that.\" (Han Solo to C-3PO)");
+  }
+      else if (guess5 < number5) {
+        alert("Oops! Your guess is too low.");
+      }   
+      else if (guess5 > number5) {
+      alert("Oops! My calculations tell me your guess is too high. Try the next question!    \"But sir, nobody worries about upsetting a droid.\"     \"That's cause droids don't pull people's arms out of their sockets when they lose. Wookiees are known to do that.\" (Han Solo to C-3PO)"); 
+      }     
+  else {
+    alert("Please enter a number to play the game!");
+  }
+  console.log("question 5", guess5);
+var number6 = 65;
+var guess6 = prompt("The Incom T-__ X-wing starfigher was the model that killed the Death Star. (Fill in the blank with a two digit number!)");
+alert("You guessed " + guess6 + ".");
+  if (guess6 == number6) {
+    alert("Excellent! You win this round!   'The Incom T-65 X-wing is the fighter that killed the Death Star. An almost perfect balance of speed, maneuverability, and defensive shielding make it the fighter of choice for Rogue Squadron.' (General Carlist Rieekan)");
+  }
+      else if (guess6 < number6) {
+        alert("Oops! Your guess is too low.");
+      } 
+      else if (guess6 > number6) { 
+        alert("Oops! My calculations tell me your guess is too high. Try the next question!"); 
+      }     
+  else {
+      alert("Please enter a number to play the game!");
+  }
+console.log("question 6", guess6);
+alert("Good work my young Padawan! Refresh the browser to play again!");

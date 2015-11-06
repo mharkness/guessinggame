@@ -20,3 +20,5 @@ Q: Which program do Jedi use to open PDF files?
 A: Adobe Wan Kenobi
 
 (Source: http://www.rd.com/funny-stuff/corny-star-wars-jokes/)
+
+All Trivia questions sourced from Wookieepedia, the Star Wars Wiki - Wikia (http://starwars.wikia.com/wiki/Main_Page)
