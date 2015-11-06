@@ -10,7 +10,7 @@ A series of trivia questions will appear in a pop up box. By answering each ques
 
 You can play the game as many times as you like by refreshing the browser. 
 
-Game questions are displayed in your browswer in the order they will appear in pop ups.
+Game questions are displayed in your browser in the order they will appear in pop ups.
 
 Please enable pop ups in your browser to play.
 
