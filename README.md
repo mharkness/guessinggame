@@ -2,17 +2,15 @@ Author: Morgan Harkness
 
 Game: Star Wars Trivia
 
-Project Purpose: A game building exercise in Code Fellows Foundation I class utilizing HTML and JavaScript. Please be kind.
+Project Purpose: A game building exercise in Code Fellows Foundation I class utilizing HTML and JavaScript.
 
-Description: This is a Star Wars Trivia guessing game where questions and input live in pop up boxes in your browser. 
+Description: This is a Star Wars Trivia guessing game where questions appear in alerts and your input displays in the browser window. 
 
 A series of trivia questions will appear in a pop up box. By answering each question you can proceed to the next question whether your answer is right or wrong. 
 
 You can play the game as many times as you like by refreshing the browser. 
 
-Game questions are displayed in your browser in the order they will appear in pop ups.
-
-Please enable pop ups in your browser to play.
+Please enable alerts in your browser to play.
 
 
 Q: Which program do Jedi use to open PDF files?
