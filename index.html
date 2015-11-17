@@ -1,35 +1,55 @@
 <!DOCTYPE HTML>
 <head>
   <title>Star Wars Trivia Time</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
 </head> 
 <body>
   
-		<h1>Play with me! Guess Star Wars trivia questions!</h1>
-  	  <p>Description: This is a Star Wars Trivia guessing game where questions and input live in pop up boxes in your browser.</p> 
-			<p>A series of trivia questions will appear in a pop up box. By answering each question you can proceed to the next question whether your answer is right or wrong.</p> 
+		<h1 id='top' class='headline'>Star Wars Mini Trivia!</h1>
+    <div class='instructions'>
+  	  <p>Game Intro: This is a mini Star Wars Trivia guessing game.</p><p>A series of trivia questions will appear in an alert. By answering each question in the input area you can proceed to the next question whether your answer is right or wrong.</p> 
 			<p>You can play the game as many times as you like by refreshing the browser.</p>
-			<p>Game questions are displayed in your browser in the order they will appear in alerts.</p>
-			<p>Please enable alerts in your browser to play.</p>
+			<p>Game questions below are displayed in the order they will appear in alerts.</p>
+			<p>(Please enable alerts in your browser to play.)</p>
+    </div>
  
-  	<h3>How many TIE starfighters were typically carried on an Imperial-class Star Destroyer?</h3>
-  	<p id='guess1'></p>
-    <div id='img1' width='200' height='200'></div>
-  	<h3>How many AT-AT walkers were carried on a Star Destroyer?</h3>
-  	<p id='guess2'></p>
+  <div class='box'>
+    <h3>How many TIE starfighters were typically carried on an Imperial-class Star Destroyer?</h3>
+    	<p id='guess1'></p>
+    <div id='img1'></div>
+  </div>
+
+  <div class='box'>	
+    <h3>How many AT-AT walkers were carried on a Star Destroyer?</h3>
+    	<p id='guess2'></p>
   	<div id='img2'></div>
+  </div>  
+  
+  <div class='box'>
   	<h3>Was the Star Destroyer equipped with a Hyperdrive System?</h3>
   	<p id='guess3'></p>
     <div id='img3'></div>
+  </div>
+
+  <div class='box'>
   	<h3>Do Wookiees have claws?</h3>
-  	<p id='guess4'></p>
+    	<p id='guess4'></p>
     <div id='img4'></div>
+  </div>
+
+  <div class='box'>
   	<h3>How many children did Chewbacca have back on his home planet of Kashyyyk?</h3>
-  	<p id='guess5'></p>
+    	<p id='guess5'></p>
     <div id='img5'></div>
-  	<h3>The Incom T-__ X-wing starfigher was the model that killed the Death Star. (Fill in the blank with a two digit number!)</h3>
-  	<p id='guess6'></p>
+  </div>
+  
+  <div class='box'>	<h3>The Incom T-__ X-wing starfigher was the model that killed the Death Star. (Fill in the blank with a two digit number!)</h3>
+    	<p id='guess6'></p>
     <div id='img6'></div>
+  </div>
   	<hr />
-  	<p id='endMsg'></p>
+  	<p id='endMsg' class='instructions'></p>
+  <a href='#top'>Top of page</a>  
   <script src='game.js'></script>
 </body>

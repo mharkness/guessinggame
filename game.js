@@ -19,29 +19,43 @@ function question1() {
   guessArray.push(guess);
   var msg = "<p>You guessed " + guessArray[0] + ". </p>";
   if (guessArray[0]== answersArray[0]) {
-    msg+=("<p>Excellent! You win this round!</p>   'I maintain that the effectiveness of the Star Destroyer stems from not only its massive firepower, but from its size. When citizens look at a Star Destroyer and then compare it to the craft which might be mustered to attack it, they have a tendency to dismiss such a notion as suicidal rather than approach the problem tactically.' (Grand Moff Wilhuff Tarkin)</p>");
+    msg+=('<p class="correct">Excellent! You win this round!</p>   \'I maintain that the effectiveness of the Star Destroyer stems from not only its massive firepower, but from its size. When citizens look at a Star Destroyer and then compare it to the craft which might be mustered to attack it, they have a tendency to dismiss such a notion as suicidal rather than approach the problem tactically.\' (Grand Moff Wilhuff Tarkin)</p>');
     var imgel = document.getElementById('img1');
+    var el = document.getElementById('guess1');
+    el.className= "correct";
     imgel.innerHTML = "<img src='./images/TIEFIGHTER.jpg' width='200' height='200'>";
+    //var colorel = document.getElementsByClassName('correct');
+    //colorel.className = 'correct';
   
   }
     else if (guessArray[0] < answersArray[0]) {
       if ((guessArray[0] >= answersArray[0] - 20) && (guessArray[0] < answersArray[0])) {
         msg+=("<p>You guessed too low! But you are within 20 integers of the answer. So close. Try the next question!</p>");
+        var el = document.getElementById('guess1');
+        el.className= "incorrect";
       } 
       else {
         msg+=("<p>Oops! My calculations tell me your guess is too low.   'For every TIE fighter you shoot down, a thousand more will take its place.' (Baron Soontir Fel)</p>");
+        var el = document.getElementById('guess1');
+        el.className= "incorrect";
       }
     } 
     else if (guessArray[0] > answersArray[0]) {     
       if ((guessArray[0] <= answersArray[0] + 20) && (guessArray[0] > answersArray[0])) {
         msg+=("<p>You guessed too high! But you are within 20 integers of the correct answer. So close. Try the next question!</p>");
+        var el = document.getElementById('guess1');
+        el.className= "incorrect";
       } 
       else { 
         msg+=("<p>Oops! My calculations tell me your guess is too high. Try the next question!</p>   <p>'The aging, outdated craft employed by the Rebels are no match for the power of the TIE, and even the prototype T-65 X-wing created by the traitors who escaped from Incom is clearly outclassed.' (Captain David West Reynolds)</p>"); 
+        var el = document.getElementById('guess1');
+        el.className= "incorrect";
       }
     }   
     else {
       msg+=("<p>Please enter a answersArray[0] to play the game!</p>");
+      var el = document.getElementById('guess1');
+      el.className= "incorrect";
     }   
   var el = document.getElementById('guess1');
   el.innerHTML = msg;
@@ -54,27 +68,39 @@ function question2() {
   if (guessArray[1] == answersArray[1] ) {
     msg+=("<p>Excellent! You win this round!</p>   <p>'We had the Battle of Gormen won, until the AT-ATs arrived. They came out of the fog and ripped apart the front lines. The locals ran in terror, but the experienced soldiers surrendered. We knew that you can't outrun an AT-AT.' (Major Bren Derlin)</p>");
     var imgel = document.getElementById('img2');
+    var el = document.getElementById('guess2');
+    el.className= "correct";
     imgel.innerHTML = "<img src='./images/ATAT.jpg' width='200' height='200'>";
   }
     
     else if (guessArray[1] < answersArray[1]) {
       if ((guessArray[1] >= answersArray[1] - 20) && (guessArray[1] < answersArray[1])) {
         msg+=("<p>You guessed too high! But you are within 20 integers of the answer. So close.</p>");
+        var el = document.getElementById('guess2');
+        el.className= "incorrect";
       }
       else {
         msg+=("<p>Oops! Your guess is too low.</p>   <p>'We had the Battle of Gormen won, until the AT-ATs arrived. They came out of the fog and ripped apart the front lines. The locals ran in terror, but the experienced soldiers surrendered. We knew that you can't outrun an AT-AT.' (Major Bren Derlin)</p>");
+        var el = document.getElementById('guess2');
+        el.className= "incorrect";
       }
     } 
     else if (guessArray[1] > answersArray[1]) {
       if ((guessArray[1] <= answersArray[1] + 20) && (guessArray[1] > answersArray[1])) {
        msg+=("<p>You guessed too low! But you are within 20 integers of the correct answer. So close. Try the next question. Maybe it'll be easier!</p>");
+       var el = document.getElementById('guess2');
+       el.className= "incorrect";
       }
       else {
         msg+=("<p>Oops! My calculations tell me your guess is too high. Try the next question!</p>   <p>'Will you look at those walkers? Has there ever been anything so big and gray and ugly, Luke?' (Captain David West Reynolds)</p>"); 
+        var el = document.getElementById('guess2');
+        el.className= "incorrect";
       } 
     }     
   else {
       msg+=("<p>Please enter a number to play the game!</p>");
+      var el = document.getElementById('guess2');
+      el.className= "incorrect";
   }
   var el = document.getElementById('guess2');
   el.innerHTML = msg;
@@ -85,6 +111,9 @@ function question3() {
   guessArray.push(guess);
   var imgel = document.getElementById('img3');
   var msg = "<p>You guessed " + guessArray[2] + ". </p>";
+  var el = document.getElementById('guess3');
+  el.className= "correct";
+
   switch(guessArray[2]) {
     case "Y":
         msg+=("<p>Excellent! You win this round!</p>   <p>'I maintain that the effectiveness of the Star Destroyer stems from not only its massive firepower, but from its size. When citizens look at a Star Destroyer and then compare it to the craft which might be mustered to attack it, they have a tendency to dismiss such a notion as suicidal rather than approach the problem tactically.' (Grand Moff Wilhuff Tarkin)</p>");
@@ -108,6 +137,8 @@ function question3() {
         break;
     default:
       msg+=("<p>Oops! You got it wrong. Did you answer by typing Y or N? Try this question set again by refreshing the page!</p>");
+      var el = document.getElementById('guess3');
+      el.className= "incorrect";
     }       
     var el = document.getElementById('guess3');
     el.innerHTML = msg;
@@ -117,6 +148,8 @@ function question4() {
   var guess = prompt(questionsArray[3]);
   guessArray.push(guess);
   var imgel = document.getElementById('img4');
+  var el = document.getElementById('guess4');
+  el.className= "correct";
   var msg = "<p>You guessed " + guessArray[3] + ". </p>";
   switch(guessArray[3]) {
     case "Y":
@@ -141,6 +174,8 @@ function question4() {
         break;
     default:
       msg+=("<p>Oops! You got it wrong. Did you answer by typing Y or N? Try this question set again by refreshing the page!</p>");
+      var el = document.getElementById('guess4');
+      el.className= "incorrect";
     }       
   var el = document.getElementById('guess4');
   el.innerHTML = msg;
@@ -153,17 +188,26 @@ function question5() {
   if (guessArray[4] == answersArray[2]) {
     msg+=("<p>Excellent! You win this round!</p>   <p>'But sir, nobody worries about upsetting a droid.'     'That's cause droids don't pull people's arms out of their sockets when they lose. Wookiees are known to do that.' (Han Solo to C-3PO)</p>");
     var imgel = document.getElementById('img5');
+    var el = document.getElementById('guess5');
+    el.className= "correct";
     imgel.innerHTML = "<img src='./images/KASHYYYK.jpg' width='200' height='200'>";
  
   }
       else if (guessArray[4] < answersArray[2]) {
         msg+=("<p>Oops! Your guess is too low.</p>");
+        var el = document.getElementById('guess5');
+        el.className= "incorrect";
+    
       }   
       else if (guessArray[4] > answersArray[2]) {
       msg+=("<p>Oops! My calculations tell me your guess is too high. Try the next question!</p>    <p>'But sir, nobody worries about upsetting a droid.'     'That's cause droids don't pull people's arms out of their sockets when they lose. Wookiees are known to do that.' (Han Solo to C-3PO)</p>"); 
+      var el = document.getElementById('guess5');
+      el.className= "incorrect";
       }     
   else {
     msg+=("<p>Please enter a number to play the game!</p>");
+    var el = document.getElementById('guess5');
+    el.className= "incorrect";
   }
   var el = document.getElementById('guess5');
   el.innerHTML = msg;
@@ -176,17 +220,27 @@ function question6() {
   if (guessArray[5] == answersArray[3]) {
     msg+=("<p>Excellent! You win this round!</p>   <p>'The Incom T-65 X-wing is the fighter that killed the Death Star. An almost perfect balance of speed, maneuverability, and defensive shielding make it the fighter of choice for Rogue Squadron.' (General Carlist Rieekan)</p>");
     var imgel = document.getElementById('img6');
+    var el = document.getElementById('guess6');
+    el.className= "correct";
     imgel.innerHTML = "<img src='./images/T65.jpg' width='200' height='200'>";
 
   }
       else if (guessArray[5] < answersArray[3]) {
         msg+=("<p>Oops! Your guess is too low.</p>");
+        var el = document.getElementById('guess6');
+        el.className= "incorrect";
+    
       } 
       else if (guessArray[5] > answersArray[3]) { 
         msg+=("<p>Oops! My calculations tell me your guess is too high. Try the next question!</p>"); 
+        var el = document.getElementById('guess6');
+        el.className= "incorrect";
       }     
   else {
       msg+=("<p>Please enter a number to play the game!</p>");
+      var el = document.getElementById('guess6');
+      el.className= "incorrect";
+
   }
   var el = document.getElementById('guess6');
   el.innerHTML = msg;
